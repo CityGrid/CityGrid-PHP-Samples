@@ -176,7 +176,7 @@ class citygridplaces {
 		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);   
 		
 		curl_setopt($curl_handle,CURLOPT_SSL_VERIFYPEER,0); 
-		//curl_setopt($curl_handle,CURLOPT_CAINFO,'/var/www/html/system/ca-bundle.
+		curl_setopt($curl_handle,CURLOPT_CAINFO,'/var/www/html/system/ca-bundle.crt');
 		
 		$searchResponse = curl_exec($curl_handle);  
 		curl_close($curl_handle);    
